@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+
+{% block shortcuts %}
+    <a href="/">Home page</a>
+    {% if request.user.is_staff %}
+        <a href="/data/blockchain">View the blockchain data</a>
+    {% endif %}
+{% endblock %}
+
+{% block content %}
+
+    {% block filter %}
+    {% endblock %}
+
+    <table>
+        <caption>
+            <p>Data saved on blockchain</p>
+        </caption>
+        <thead>
+            <tr>
+                <th>Registration date</th>
+                <th>Produced energy</th>
+                <th>Consumed energy</th>
+                <th>Transaction</td>
+            </tr>
+        </thead>
+        {% block data_for_user %}
+        {% endblock %}
+    </table>
+{% endblock %}

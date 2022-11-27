@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+
+{% block shortcuts %}
+    <a href="/">Home page</a>
+    <a href="/data/">View the energy data</a>
+    {% if request.user.is_staff %}
+        <a href="/data/blockchain">View the blockchain data</a>
+    {% endif %}
+{% endblock %}
+
+{% block user_account %}
+    <a href="/user/logout">Logout</a>
+    <a href="/user/delete">Delete account</a>
+{% endblock %}
+
+{% block content %}
+    <div id="account">
+        <h2 id="account">Profile</h2>
+        <p>Your first name: {{ request.user.first_name }}</p>
+        <p>Your last name: {{ request.user.last_name }}</p>
+        <p>Your email: {{ request.user.email }}</p>
+        <p>Number of access: {{ access }}</p>
+    </div>
+    <div class="form" id="account">
+        <h2>Update your data</h2>
+        <form method="POST" action="/user/account">
+            {% csrf_token %}
+            {{ form }}
+            {% if request.user.is_staff %}
+                <label name="value_transaction">Cost for send a transaction</label>
+                <input type="number" name="value_transaction">
+            {% endif %}
+            <button type="submit">Save data</button>
+        </form>
+    </div>
+{% endblock %}
+
+{% block messages %}
+    {% if messages %}
+        {% for message in messages %}
+            {% if message.level == DEFAULT_MESSAGE_LEVELS.SUCCESS %}
+                <p class="messages" id="success">{{ message }}</p>
+            {% elif message.level == DEFAULT_MESSAGE_LEVELS.INFO %}
+                <p class="messages" id="info">{{ message }}</p>
+            {% elif message.level == DEFAULT_MESSAGE_LEVELS.ERROR %}
+                <p class="messages" id="error">{{ message }}</p>
+            {% endif %}
+        {% endfor %}
+    {% endif %}
+{% endblock %}

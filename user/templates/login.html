@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+
+{% block shortcuts %}
+    <a href="/">Home page</a>
+{% endblock %}
+
+{% block user_account %}
+{% endblock %}
+
+{% block content %}
+    <div class="form" id="login">
+        <h2>Login</h2>
+        <form method="POST" action="/user/login/">
+            {% csrf_token %}
+            {{ form }}
+            <button type="submit">Login</button>
+        </form>
+    </div>
+    <p id="login">You aren't register yet</p>
+    <form method="GET" action="/user/create_user" id="register">
+        <button type="submit">Create new account</button>
+    </form>
+    {% if messages %}
+        {% for message in messages %}
+            <p class="messages" id="error">{{ message }}</p>
+        {% endfor %}
+    {% endif %}
+{% endblock %}

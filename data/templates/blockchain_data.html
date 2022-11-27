@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+
+{% block shortcuts %}
+    <a href="/">Home page</a>
+    <a href="/data/">View the energy data</a>
+{% endblock %}
+
+{% block content %}
+    <div id="blockchain">
+        <p>Cost for save data: {{ value }} ether</p>
+        <p>Quantity of gas for send an information: {{ gas_transaction }} gas</p>
+        <p>Gas price: {{ gas_price }} gas</p>
+        <p>Your balance is {{ balance }}</p>
+        <p>Pomelia's hotel have done {{ number_transaction }} transactions</p>
+    </div>
+{% endblock %}

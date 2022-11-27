@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+
+{% block shortcuts %}
+    <a href="/">Home page</a>
+{% endblock %}
+
+{% block content %}
+    <div class="form" id="create">
+        <h2>Create account</h2>
+        <form method="POST" action="/user/create_user/">
+            {% csrf_token %}
+            {{ form }}
+            <button type="submit">Create user</button>
+        </form>
+    </div>
+{% endblock %}

@@ -1,0 +1,40 @@
+{% extends 'data_base.html' %}
+
+
+{% block filter %}
+    <div id="filter">
+        <form method="GET" action="/data/admin">
+            <label>Choose the date for avarage</label>
+            <input type="date" name="start_date">
+            <input type="date" name="finish_date">
+            <button type="submit">View</button>
+        </form>
+    </div>
+{% endblock %}
+
+{% block data_for_user %}
+    <tbody>
+        {% for day_data in data %}
+            <tr>
+                <td>{{ day_data.date }}</td>
+                <td>{{ day_data.produced_energy }} watt</td>
+                <td>{{ day_data.consumed_energy }} watt</td>
+                <td>{{ day_data.transaction }}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+    <tfoot>
+        <tr>
+            <td>Total</td>
+            <td>{{ total_produced_energy }} watt</td>
+            <td>{{ total_consumed_energy }} watt</td>
+            <td>{{ total_registration }} transaction</td>
+        </tr>
+        <tr>
+           <td>Average</td>
+           <td>{{ average_produced_energy }} watt</td>
+           <td>{{ average_consumed_energy }} watt</td>
+           <td></td>
+        </tr>
+    </tfoot>
+{% endblock %}

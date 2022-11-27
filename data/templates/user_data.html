@@ -1,0 +1,15 @@
+{% extends 'data_base.html' %}
+
+
+{% block data_for_user %}
+    <tbody>
+        {% for day_data in data %}
+            <tr>
+                <td>{{ day_data.date }}</td>
+                <td>{{ day_data.produced_energy }} watt</td>
+                <td>{{ day_data.consumed_energy }} watt</td>
+                <td>{{ day_data.transaction }}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+{% endblock %}

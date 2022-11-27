@@ -1,0 +1,206 @@
+body {
+    /*background: url('rinnovabili-eolico-e-fotovoltaico.jpg');*/
+    background-color: white;
+    background-size: cover;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* style for login page */
+div.form {
+    border: 1px solid gray;
+    padding: 20px;
+    width: 400px
+}
+
+div.form#create {
+    margin: 20px auto;
+    width: 400px
+}
+
+div.form#login {
+    margin: 60px auto 0;
+    width: 250px
+}
+
+form>button {
+    width: 100%;
+    font-size: 14px;
+    margin: 25px 0 10px
+}
+
+label {
+    display: block;
+    font-size: 16px;
+    margin: auto;
+    weight: bold;
+    text-align: center;
+    margin: 0
+}
+
+input {
+    display: block;
+    text-align: center;
+    margin: 5px auto 15px;
+    width: 95%
+}
+
+form#register {
+    width: 250px;
+    margin: auto
+}
+
+ul {
+    padding-inline-start: 20px
+}
+
+li {
+    text-align: left
+}
+
+.helptext {
+    text-align: center;
+    margin: auto;
+    font-size: 14px
+}
+
+p#login {
+    font-size: 13px;
+    text-align: center
+}
+
+
+/* style for bar */
+div.bar {
+    background-color: rgb(22, 154, 195, 0.7);
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between
+}
+
+h1, h2, h3  {
+    text-align: center
+}
+
+a {
+    font-size: 16px;
+    color: black;
+    margin: 0 5px;
+    background: rgba(119, 136, 153, 0.9);
+    padding: 5px;
+    border: 1px;
+    display: inline;
+    vertical-align: bottom;
+    border-radius: 20px;
+    text-decoration: none
+}
+
+a:hover {
+    padding: 7px;
+    border: 1px solid rgba(230, 230, 230, 1);
+    color: rgba(230, 230, 230, 1)
+}
+
+
+/* style for data admin */
+div#filter {
+    margin: 30px 30px 0 0;
+    float: right;
+    clear: right
+}
+
+div#filter>form>button {
+    margin: 10px 0 10px
+}
+
+caption>p {
+    font-size: 24px;
+    font-weight: bold
+}
+
+tfoot {
+    font-weight: bold
+}
+
+th {
+    background: rgb(22, 154, 195, 0.7);
+    font-size: 20px;
+    padding: 5px
+}
+
+td {
+    padding: 3px
+}
+
+tr:nth-child(even) {
+    background: rgba(176, 224, 230, 1)
+}
+
+tr:nth-child(odd) {
+    background: rgba(224, 255, 255, 1)
+}
+
+table {
+    border-collapse: collapse;
+    width: 98%;
+    font-size: 18px;
+    margin: auto;
+    clear: both
+}
+
+
+/* style for blockchain data */
+p {
+    font-size: 18px
+}
+
+
+/* style for messages */
+
+p.messages {
+    width: 500px;
+    margin: 30px auto 0px;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 14px
+}
+
+#info {
+    background-color: rgba(80, 255, 255, 1)
+}
+
+#error {
+    background-color: rgba(255, 80, 80, 1)
+}
+
+#success {
+    background-color: rgba(80, 255, 80, 1)
+}
+
+/* style for account */
+#account {
+    background-color: rgba(159, 182, 205, 1);
+    margin: 30px 0 0 60px;
+    padding: 15px;
+    width: 330px;
+    border-radius: 5px;
+    float: left
+}
+
+h2#account {
+    font-weight: normal;
+    width: 100px;
+    margin: 10px auto
+}
+
+div#account>p {
+    clear: both
+}
+
+div.form#account {
+    margin: 30px 15% 0 0;
+    width: 400px;
+    float: right
+}
