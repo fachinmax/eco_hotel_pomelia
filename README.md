@@ -1,5 +1,6 @@
 # Eco hotel Pomelia
-Questo progetto permette di salvare sulla blockchain i dati inerenti l'energia prodotta e consumanta da un
+dQuesto progetto permette di salvare sulla blockchain i dati inerenti 
+l'energia prodotta e consumanta da un
 impianto energetico, garantendo che le informazioni inviate verranno salvate per sempre rimanendo immutabili. Inoltre
 offre un sistema di autenticazione e di registrazione in modo che gli utenti autenticati possano visualizzare in maniera
 semplice e immediata le informazioni salvate sulla blockchain.
