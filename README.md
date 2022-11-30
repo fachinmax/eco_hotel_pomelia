@@ -1,4 +1,4 @@
-#Eco hotel Pomelia
+# Edco hotel Pomelia
 Questo progetto permette di salvare sulla blockchain i dati inerenti l'energia prodotta e consumanta da un
 impianto energetico, garantendo che le informazioni inviate verranno salvate per sempre rimanendo immutabili. Inoltre
 offre un sistema di autenticazione e di registrazione in modo che gli utenti autenticati possano visualizzare in maniera
@@ -6,7 +6,7 @@ semplice e immediata le informazioni salvate sulla blockchain.
 Esso a differenza di altri progetti memorizza i dati solamente sulla blockchain in quanto è un database distribuito
 e pubblico e per tanto non risulta la necessità di memorizzare i dati in un altro database, permettendo di essere utilizzato
 anche da sistemi che hanno poca memoria.
-## Funzinalità
+## Funzionalità
 Questa web-app riceve, attraverso una richiesta HTTPS, un oggetto JSON, es:
 ```python
 {
